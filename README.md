@@ -1,3 +1,4 @@
+### Gusti Ngurah Satria Aryawan (05111540000066)
 # Apache-Spark
 Sifat: INDIVIDU </br>
 Pilihlah dataset yang akan dilakukan proses data mining. Dataset setiap mahasiswa harus berbeda.
