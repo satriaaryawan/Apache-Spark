@@ -3,6 +3,7 @@
 ## Daftar Isi
 - [Deskripsi Final Project](#deskripsi-final-project)
 - [Database yang telah digunakan](#database-tugas)
+- [Deskripsi Dataset](#deskripsi-dataset)
 
 ## Deskripsi Final Project
 ![picture](src/image.png)
@@ -33,8 +34,8 @@ Misal:
     - Apabila modelnya adalah kasus clustering, maka response yang diberikan adalah ada di cluster mana data input dari user tersebut.
 
 Refrensi:<br>
-https://towardsdatascience.com/kafka-python-explained-in-10-lines-of-code-800e3e07dad1
-https://towardsdatascience.com/getting-started-with-apache-kafka-in-python-604b3250aa05
+https://towardsdatascience.com/kafka-python-explained-in-10-lines-of-code-800e3e07dad1<br>
+https://towardsdatascience.com/getting-started-with-apache-kafka-in-python-604b3250aa05<br>
 https://stackoverflow.com/questions/46001807/dump-the-kafka-kafka-python-to-a-txt-file
 
 ## Database Tugas
@@ -47,4 +48,8 @@ https://stackoverflow.com/questions/46001807/dump-the-kafka-kafka-python-to-a-tx
 - Recommendation System<br>
     Nama Database: [Collaborative filtering dataset - dating agency](http://www.occamslab.com/petricek/data/)
 - Final Project<br>
-    Nama Database:
+    Nama Database: [News Portal User Interactions by Globo.com](https://www.kaggle.com/gspmoreira/news-portal-user-interactions-by-globocom)
+
+## Deskripsi Dataset
+Dataset ini berisi <i>log</i>(<i>page views</i>) dari sebuah portal berita [Globo.com](https://www.globo.com/) yang berasal dari Brazil. Berisi data pada periode tanggal 1 Oktober 2017 hingga 16 Oktober 2017, termasuk data sebanyak 3 juta klik yang terdistribusi lebih dari 1 juta <i>sessions</i> dari 314.000 <i>users</i> yang membaca lebih dari 46.000 berita berbeda pada periode tersebut.
+- <b>click.zip</b> Folder dengan file CSV (<i>one per hour</i>), yang berisi <i>user sessions</i>.
