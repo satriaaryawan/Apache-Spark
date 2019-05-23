@@ -4,6 +4,7 @@
 - [Deskripsi Final Project](#deskripsi-final-project)
 - [Database yang telah digunakan](#database-tugas)
 - [Deskripsi Dataset](#deskripsi-dataset)
+- [Pengerjaan Final Project](#pengerjaan-final-project)
 
 ## Deskripsi Final Project
 ![picture](src/image.png)
@@ -54,4 +55,18 @@ https://stackoverflow.com/questions/46001807/dump-the-kafka-kafka-python-to-a-tx
 Dataset ini berisi <i>log</i>(<i>page views</i>) dari sebuah portal berita [Globo.com](https://www.globo.com/) yang berasal dari Brazil. Berisi data pada periode tanggal 1 Oktober 2017 hingga 16 Oktober 2017, termasuk data sebanyak 3 juta klik yang terdistribusi lebih dari 1 juta <i>sessions</i> dari 314.000 <i>users</i> yang membaca lebih dari 46.000 berita berbeda pada periode tersebut.
 - Folder <b>click.zip</b> dengan file csv (<i>one per hour</i>), yang berisi <i>user id</i>.
 - Kemudian setiap file csv digabung menjadi satu file dengan nama <b>clicks_hour.csv</b> mengunakan script python [berikut](src/combine.py), yang dijalankan pada folder hasil <i>extract</i> <b>click.zip</b>
-    
+
+## Pengerjaan Final Project
+### News Portal User Interactions by Globo.com Frequent Itemsets
+Membuat aplikasi REST-API yang akan memberikan refrensi artikel yang akan dituju setelah mengklik artikel tertentu. Aplikasi ini menggunakan algoritma <b>FP-growth</b>, dan dataset yang digunakan didapatkan dari proses streaming Kafka. Kafka server sendiri dibagi menjadi dua, yaitu Kafka Producer dan Kafka Consumer. 
+- Kafka Producer berperan sebagai publisher berfungsi mengirimkan dataset kepada suatu topik pada Kafka server
+- Kafka Consumer berfungsi menerima hasil streaming dari suatu topik yang disubscribe pada Kafka server.
+
+Sedangkan untuk Frequent Itemsets terbagi menjadi 3 bagian, yaitu application, engine, server.
+- Application berfungsi menjadi api route controller dari flask
+- Engine berfungsi menjadi engine Frequent Itemsets yang membaca dataset dari Kafka Consumer.
+- Server berfungsi sebagai penghubung Application dengan Engine.
+### Model yang digunakan
+- Model 1: 1/3 data pertama
+- Model 2: 1/3 data pertama + 1/3 data kedua
+- Model 3: 1/3 data pertama + 1/3 data kedua + 1/3 data terakhir (semua data)
