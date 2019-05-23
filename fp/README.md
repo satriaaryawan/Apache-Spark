@@ -57,8 +57,8 @@ Dataset ini berisi <i>log</i>(<i>page views</i>) dari sebuah portal berita [Glob
 - Kemudian setiap file csv digabung menjadi satu file dengan nama <b>clicks_hour.csv</b> mengunakan script python [berikut](src/combine.py), yang dijalankan pada folder hasil <i>extract</i> <b>click.zip</b>
 
 ## Pengerjaan Final Project
-### News Portal User Interactions by Globo.com Frequent Itemsets
-Membuat aplikasi REST-API yang akan memberikan refrensi artikel yang akan dituju setelah mengklik artikel tertentu. Aplikasi ini menggunakan algoritma <b>FP-growth</b>, dan dataset yang digunakan didapatkan dari proses streaming Kafka. Kafka server sendiri dibagi menjadi dua, yaitu Kafka Producer dan Kafka Consumer. 
+### News Portal User Interactions by Globo.com with Frequent Itemsets
+Membuat aplikasi REST-API yang akan memberikan refrensi artikel yang akan dituju setelah mengklik artikel tertentu. Aplikasi ini menggunakan algoritma <b>FP-growth</b>, dan dataset yang digunakan didapatkan dari proses streaming Kafka. Kafka Server sendiri dibagi menjadi dua, yaitu Kafka Producer dan Kafka Consumer. 
 - Kafka Producer berperan sebagai publisher berfungsi mengirimkan dataset kepada suatu topik pada Kafka server
 - Kafka Consumer berfungsi menerima hasil streaming dari suatu topik yang disubscribe pada Kafka server.
 
@@ -70,3 +70,24 @@ Sedangkan untuk Frequent Itemsets terbagi menjadi 3 bagian, yaitu application, e
 - Model 1: 1/3 data pertama
 - Model 2: 1/3 data pertama + 1/3 data kedua
 - Model 3: 1/3 data pertama + 1/3 data kedua + 1/3 data terakhir (semua data)
+
+### Menjalankan Kafka (Windows)
+Jalankan zookeper
+
+    .\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
+
+Jalankan kafka server
+
+    .\bin\windows\kafka-server-start.bat .\config\server.properties
+
+Jalankan producer untuk mengirim data
+
+    python producen.py
+
+Jalankan consumer untuk menerima data
+
+    python consumer.py
+
+Jalankan flask server sebagai API
+
+    python server.py
